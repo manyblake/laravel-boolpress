@@ -17,6 +17,13 @@ class PostController extends Controller
     {
         $result = Post::all();
 
+        $result->each(function ($post) {
+
+            if (!str_starts_with($post->cover, 'https://') && $post->cover)
+                $post->cover = asset('storage/' . $post->cover);
+        });
+
+
         return response()->json(['posts' => $result]);
     }
 

@@ -5,12 +5,9 @@
 <div class="container">
   <div class="row">
 
-    @if (strpos($post->cover, 'https://') === 0)
-      <img src="{{ $post->cover }}" width=350>
-
-    @elseif($post->cover)
+    @if($post->cover)
       <div class="col-12">
-        <img src="{{ asset('storage/' . $post->cover) }}" width=350>
+        <img src="{{ $post->cover) }}" width=350>
       </div>
     @endif
 
