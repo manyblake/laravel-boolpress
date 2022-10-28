@@ -1911,7 +1911,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony default export */ __webpack_exports__["default"] = ({
   data: function data() {
     return {
-      title: "Bentornato JS"
+      title: "Bentornato JS",
+      posts: []
     };
   },
   methods: {
@@ -14476,7 +14477,7 @@ __webpack_require__.r(__webpack_exports__);
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__(/*! C:\MAMP\htdocs\laravel-many-to-many\resources\js\front.js */"./resources/js/front.js");
+module.exports = __webpack_require__(/*! C:\MAMP\htdocs\laravel-api\resources\js\front.js */"./resources/js/front.js");
 
 
 /***/ })

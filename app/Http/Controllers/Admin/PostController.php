@@ -21,7 +21,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $posts = Post::limit(50)->get();
+        $posts = Post::orderBy('created_at', 'desc')->limit(50)->get();
 
         return view('admin.posts.index', compact('posts'));
     }
@@ -81,6 +81,8 @@ class PostController extends Controller
      */
     public function show(Post $post)
     {
+        $post->load('category', 'tags', 'category.posts');
+
         return view('admin.posts.show', compact('post'));
     }
 

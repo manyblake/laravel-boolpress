@@ -15,6 +15,7 @@ export default {
     data() {
         return {
             title: "Bentornato JS",
+            posts: [],
         };
     },
 
