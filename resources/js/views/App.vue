@@ -1,22 +1,25 @@
 <template>
-    <div>
-        {{ title }}
-
-        <ul>
+    <div class="container">
+        <ul class="card-list">
             <li v-for="post in posts" :key="post.id">
-                {{ post.title }}
+                <PostCard :post="post" />
             </li>
         </ul>
     </div>
 </template>
 
 <script>
+import PostCard from "./components/PostCard.vue";
+
 export default {
     data() {
         return {
-            title: "Bentornato JS",
             posts: [],
         };
+    },
+
+    components: {
+        PostCard,
     },
 
     methods: {
@@ -34,4 +37,23 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style lang="scss" scoped>
+body {
+    background-color: #fff8ed;
+}
+
+.container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.card-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
+}
+
+li {
+    flex-basis: calc((100% - 32px) / 3);
+}
+</style>
