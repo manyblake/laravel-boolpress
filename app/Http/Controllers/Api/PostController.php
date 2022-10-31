@@ -15,7 +15,7 @@ class PostController extends Controller
      */
     public function index()
     {
-        $result = Post::all();
+        $result = Post::orderBy('created_at', 'desc')->with('category', 'tags')->limit(21)->get();
 
         $result->each(function ($post) {
 

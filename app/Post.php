@@ -45,16 +45,11 @@ class Post extends Model
         return $slug;
     }
 
-    // public function getCoverPathAttribute()
-    // {
-    //     return $this->cover ? Storage::disk('images')->url($this->cover) : null;
-    // }
-
     public function getDateAttribute()
     {
         return $this->created_at->format('d/m/Y');
     }
 
-    // protected $appends = ['cover_path', 'date'];
+
     protected $appends = ['date'];
 }

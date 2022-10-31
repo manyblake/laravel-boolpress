@@ -37,11 +37,19 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="scss">
 body {
     background-color: #fff8ed;
+    margin: 50px 0;
+    p,
+    h3 {
+        margin: 0;
+        padding: 0;
+    }
 }
+</style>
 
+<style lang="scss" scoped>
 .container {
     max-width: 1000px;
     margin: 0 auto;
@@ -50,10 +58,10 @@ body {
 .card-list {
     display: flex;
     flex-wrap: wrap;
-    gap: 16px;
+    gap: 64px;
 }
 
 li {
-    flex-basis: calc((100% - 32px) / 3);
+    flex-basis: calc((100% - 128px) / 3);
 }
 </style>
