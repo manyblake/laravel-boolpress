@@ -1,14 +1,16 @@
 <template>
     <div class="container">
-        <ul class="card-list">
+        <router-view></router-view>
+        <!-- <ul class="card-list">
             <li v-for="post in posts" :key="post.id">
                 <PostCard :post="post" />
             </li>
-        </ul>
+        </ul> -->
     </div>
 </template>
 
 <script>
+import { RouterView } from "vue-router";
 import PostCard from "./components/PostCard.vue";
 
 export default {
@@ -20,6 +22,7 @@ export default {
 
     components: {
         PostCard,
+        RouterView,
     },
 
     methods: {
