@@ -1,13 +1,18 @@
 <template>
-    <router-view></router-view>
+    <div>
+        <Nav />
+        <router-view></router-view>
+    </div>
 </template>
 
 <script>
 import { RouterView } from "vue-router";
+import Nav from "./components/Nav.vue";
 
 export default {
     components: {
         RouterView,
+        Nav,
     },
 };
 </script>
