@@ -1,10 +1,15 @@
 <template>
     <div class="container">
-        <ul class="card-list">
-            <li v-for="post in posts" :key="post.id">
+        <div class="card-list">
+            <router-link
+                class="card"
+                :to="{ name: 'posts.show', params: { slug: post.slug } }"
+                v-for="post in posts"
+                :key="post.id"
+            >
                 <PostCard :post="post" />
-            </li>
-        </ul>
+            </router-link>
+        </div>
     </div>
 </template>
 
@@ -48,7 +53,9 @@ export default {
     gap: 64px;
 }
 
-li {
+.card {
     flex-basis: calc((100% - 128px) / 3);
+    color: currentColor;
+    text-decoration: none;
 }
 </style>
